@@ -18,7 +18,7 @@ public class Main {
         if (System.getenv("PORT") != null) {
             Spark.port(Integer.valueOf(System.getenv("PORT")));
         }
-        Systerm.out.println("hello world");
+        System.out.println("hello world");
         
         OpiskelijaDao opiskelijaDao = new OpiskelijaDao(database);
 
