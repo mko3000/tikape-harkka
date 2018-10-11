@@ -17,6 +17,8 @@ public class Database {
     }
 
     public void init() {
+        // tee tähän joku if-lause, joka testaa onko jo tehty eikä tee sitten uudestaan inittiä
+        
         List<String> lauseet = sqliteLauseet();
 
         // "try with resources" sulkee resurssin automaattisesti lopuksi
@@ -31,6 +33,7 @@ public class Database {
 
         } catch (Throwable t) {
             // jos tietokantataulu on jo olemassa, ei komentoja suoriteta
+            System.out.println("koppi");
             System.out.println("Error >> " + t.getMessage());
         }
     }
